@@ -91,6 +91,7 @@ The application validates user inputs and ensures that:
 To run tests, use:
 ```bash
 pytest
+```
 
 License
 -------
