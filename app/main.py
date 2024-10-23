@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from .routers import users, expenses
-from .database import engine, Base
+from routers import users, expenses
+from database import engine, Base
 
 Base.metadata.create_all(bind=engine)
 
@@ -12,3 +12,4 @@ app.include_router(expenses.router)
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the Daily Expenses Sharing Application"}
+
